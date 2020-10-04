@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div class="formulario">
+    <form [formGroup]="formulario" (submit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Login</ion-label>
+        <ion-input formControlName="login"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input formControlName="senha"></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        color="primary"
+        [disabled]="formulario.invalid"
+        type="submit"
+        >logar</ion-button
+      >
+    </form>
+  </div>
+
+  <p class="logado" *ngIf="clicou == true &&  !logou  ">{{mensagem}}</p>
+
+
+  <div *ngIf="logou">
+    <p class="logado">bem vindo {{usuario.nome}}</p>
+    <ion-button expand="block"   (click)="entrar()">Entrar</ion-button>
+  </div>
+</ion-content>
