@@ -1,4 +1,15 @@
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding" >
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="cadastrar()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <h1 class="ion-text-center" class="icon-7em" >
+    <img src="../../assets/icon/img.jpg" />
+  </h1>
+
   <div class="formulario">
     <form [formGroup]="formulario" (submit)="onSubmit()">
       <ion-item>
@@ -23,9 +34,7 @@
 
   <p class="logado" *ngIf="clicou == true &&  !logou  ">{{mensagem}}</p>
 
-
   <div *ngIf="logou">
     <p class="logado">bem vindo {{usuario.nome}}</p>
-    
   </div>
 </ion-content>

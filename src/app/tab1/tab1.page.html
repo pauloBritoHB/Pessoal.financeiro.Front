@@ -1,9 +1,48 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title> Pagina 1 </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="corpo">
+  <br/>
+  <ion-card class="cor2">
+    <ion-card-header>
+      <ion-card-subtitle class="cortexto">Controle financeiro</ion-card-subtitle>
+      <ion-card-title >Janeiro</ion-card-title>
+    </ion-card-header>
 
-<ion-content [fullscreen]="true">
-<h1>{{mensagem}}</h1>
-</ion-content>
+    <ion-card-content>
+      <ion-item href="#" class="ion-activated">
+        <ion-icon name="trending-up" slot="start" color="primary"></ion-icon>
+        <ion-label color="primary">Saldo..........R$ 3.500,00</ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-item href="#" class="ion-activated">
+        <ion-icon name="receipt" slot="start" class="alerta"></ion-icon>
+        <ion-label class="alerta"> A pagar.......R$ 3.500,00</ion-label>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-item href="#" class="ion-activated">
+        <ion-icon name="alarm" slot="start" class="saida"></ion-icon>
+        <ion-label class="saida">Vencidas.... R$ 3.500,00</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <br/><br/>
+  <ion-card class="cor2">
+    <ion-card-header>
+      <ion-card-subtitle class="cortexto">Operações</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-item (click)="depositar()" class="ion-activated">
+      <ion-icon name="add-circle-outline" slot="start" class="entrada"></ion-icon>
+      <ion-label  class="entrada">Informar Entrada</ion-label>
+    </ion-item>
+
+    <ion-item (click)="retirar()" class="ion-activated">
+      <ion-icon name="remove-circle-outline" slot="start" class="saida"></ion-icon>
+      <ion-label class="saida">Informar Saída</ion-label>
+    </ion-item>
+    
+ 
+  </ion-card>
+</div>

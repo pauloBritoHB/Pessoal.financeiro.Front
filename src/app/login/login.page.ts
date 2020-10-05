@@ -58,4 +58,6 @@ export class LoginPage {
         }
       );
   }
+
+  public cadastrar(): void { }
 }
