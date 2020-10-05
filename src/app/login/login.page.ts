@@ -46,6 +46,7 @@ export class LoginPage {
           } else {
             this.logou = true;
             this.usuario = this.result.data[0];
+            this.navCtrl.navigateForward('/tabs/tab1');
           }
         },
         error => {
@@ -57,11 +58,4 @@ export class LoginPage {
         }
       );
   }
-
-  public entrar() {
-    this.navCtrl.navigateForward('/tabs/tab1');
-  }
-
-
-
 }
